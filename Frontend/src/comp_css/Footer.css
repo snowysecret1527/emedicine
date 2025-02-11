@@ -1,0 +1,117 @@
+.footer {
+    background-color: #0e2e4a;
+    padding: 20px; /* Adjusted padding */
+    color: whitesmoke;
+    /* position: absolute;  Remove absolute positioning for better responsiveness */
+    width: 100%;
+    bottom: 0;
+    /* Optional: Use flexbox for better vertical alignment if needed */
+    display: flex;
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    align-items: center; /* Center content horizontally */
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Increased minmax for better column distribution */
+    gap: 20px;
+    width: 90%; /* Occupy most of the footer width */
+    max-width: 1200px; /* Set a maximum width for larger screens */
+    margin: 0 auto;
+}
+
+.footer-section { /* Added a class to wrap the content */
+    text-align: left; /* Align text to the left */
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: whitesmoke;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px; /* Reduced margin for smaller screens */
+    color: whitesmoke;
+}
+
+/* Subscribe Box */
+.subscribe-box {
+    display: flex;
+    flex-direction: column; /* Stack input and button vertically on smaller screens */
+    margin-top: 22px;
+    width: 100%; /* Make subscribe box full width */
+}
+
+.subscribe-box input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px; /* Add margin between input and button */
+}
+
+.subscribe-box button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Footer Images */
+.footer-images {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+    justify-content: space-around; /* Distribute images evenly */
+    gap: 10px; /* Add some space between images */
+}
+
+.footer-images img {
+    max-width: 150px; /* Limit image width */
+    height: auto;
+}
+
+/* Admin Access Link */
+.admin-link {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    text-align: center; /* Center the admin link */
+    width: 100%;
+}
+
+.admin-link a {
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #aeabab;
+}
+
+.admin-link a:hover {
+    color: #f2e9e9;
+    border-bottom-color: #b7b1b1;
+}
+
+/* Media Query for smaller screens (e.g., tablets and phones) */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+    .footer-section {
+      text-align: center; /* Center text in each section */
+    }
+
+    .footer-section ul li {
+        text-align: center;
+    }
+
+    .footer-images img {
+        max-width: 100%; /* Make images full width on smaller screens */
+    }
+}

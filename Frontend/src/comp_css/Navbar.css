@@ -1,0 +1,111 @@
+/* Navbar.css */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.logo h3:hover {
+  color: #ff4d4d;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  width: 250px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #333;
+  font-size: 14px;
+}
+
+.search-bar input::placeholder {
+  color: #aaa;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.search-icon:hover {
+  color: #007bff;
+}
+
+.nav-options {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between text and icon (if you add them later) */
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-item:hover {
+  background: rgba(0, 123, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.nav-item span { /* Style the text within nav items */
+  margin-right: 5px; /* Add space between text and potential icon (if you add them later) */
+}
+
+
+.logout {
+  color: #ff4d4d;
+  font-weight: 600;
+}
+
+.logout:hover {
+  background: rgba(255, 77, 77, 0.1);
+}
+
+@media (max-width: 768px) {
+  .search-bar input {
+    width: 150px;
+  }
+
+  .nav-options {
+    gap: 15px;
+  }
+}

@@ -1,0 +1,133 @@
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .slider-container {
+    position: relative;
+    width: 100%;  /* Full viewport width */
+    height: 100vh;  /* Half of the screen height */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px; /* Adjust this value to position it lower */
+  }
+  
+  
+  .slider-image {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .prev-btn,
+  .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .prev-btn:hover,
+  .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .prev-btn {
+    left: 10px;
+  }
+  
+  .next-btn {
+    right: 10px;
+  }
+
+
+  .blocks-container {
+    display: flex;
+    justify-content: space-around; /* Distribute blocks evenly */
+    width: 100%;
+    margin-top: 20px;  /* Space between slider and blocks */
+  }
+  
+  /* Individual block styles */
+  .block {
+    width: 30%; /* Each block takes 30% of the width */
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Optional: Hover effect on blocks */
+  .block:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+  }
+  
+  .block h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+  }
+
+  /* Container for the gallery information */
+.gallery-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 40px; /* Space below the image slider */
+    padding: 20px;
+  }
+  
+  /* Each info item (like "Established", "Available Arts") */
+  .info-item {
+    width: 45%; /* Take 45% of the container's width */
+    background-color: #f9f9f9;
+    padding: 25px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .info-item h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .info-item p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .info-item:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  }
+  
+  /* Responsive Design: Stacks info items on smaller screens */
+  @media (max-width: 768px) {
+    .info-item {
+      width: 100%; /* Full width on mobile screens */
+      margin: 15px 0;
+    }
+}
