@@ -25,23 +25,23 @@ const Profile = () => {
     setNewPassword1({ ...passform, [e.target.name]: val });
   };
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e) => {
     
-    e.preventDefault();
+  //   e.preventDefault();
 
-    api
-      .put(`/emedicine/customers/update-password/${userid}`, passform)
-      .then((response) => {
-        alert("Password updated successfully");
-        setShowPassSection(false);
-      })
-      .catch((error) => {
-        alert("Error occurs Try latter....")
-      });
-  };
-  const changePassword = () => {
-    setShowPassSection(true);
-  };
+  //   api
+  //     .put(`/emedicine/customers/update-password/${userid}`, passform)
+  //     .then((response) => {
+  //       alert("Password updated successfully");
+  //       setShowPassSection(false);
+  //     })
+  //     .catch((error) => {
+  //       alert("Error occurs Try latter....")
+  //     });
+  // };
+  // const changePassword = () => {
+  //   setShowPassSection(true);
+  // };
 
   const handlerUpdateAddress = (latestAddress) => {
     setAdd(latestAddress);
@@ -61,7 +61,7 @@ const Profile = () => {
 
   useEffect(() => {
     api
-      .get(`/emedicine/customers/${userid}`)
+      .get(`http://127.0.0.1:8081/emedicine/customers/${userid}`)
       .then((response) => {
         setProfileData(response.data);
         setAddressModal(false);
@@ -172,7 +172,7 @@ const Profile = () => {
             )}
           </div>
         </div>
-        <div className="updatePassword">
+        {/* <div className="updatePassword">
           {showPassSection ? (
             <form onSubmit={handleSubmit}>
               <label htmlFor="newPassword">New Password:</label>
@@ -202,7 +202,7 @@ const Profile = () => {
               ChangePassword
             </button>
           )}
-        </div>
+        </div> */}
       </div>
     </>
   );

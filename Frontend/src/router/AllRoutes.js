@@ -5,7 +5,7 @@ import Product from '../pages/Product.js'
 import Cart from '../pages/Cart.js'
 import Home from '../pages/Home.js'
 import {Privateroute} from '../router/ProtectedRoute.js'
-import ShippingDetails from '../pages/ShippingDetails.js'
+
 import OrderDetails from '../pages/OrderDetails.js'
 import Payment from '../pages/Payment.js'
 import PaymentForm from '../pages/PaymentForm.js'
@@ -33,7 +33,7 @@ export default function RouterPage() {
         <Route path="/user" element={<Privateroute />}>
           <Route path="cart" element={<Cart />} />
           <Route path="upload" element={<UploadPrescription />} />
-          <Route path="save-address" element={<ShippingDetails />} />
+        
           <Route path="order-details" element={<OrderDetails />} />
           <Route path="payment-success" element={<Payment />} />
           <Route path="make-payment" element={<PaymentForm />} />

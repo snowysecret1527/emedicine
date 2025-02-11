@@ -26,7 +26,7 @@ const Address = ({ onclose }) => {
     e.preventDefault()
     console.log(address);
     api
-      .post(`/emedicine/customer-addresses/${userid}`, address)
+      .post(`http://127.0.0.1:8081/emedicine/customer-addresses/${userid}`, address)
       .then((response) => {
         alert("Address Addeded Succesfully..");
         navigate(`/user/profile/${userid}`);
