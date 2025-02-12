@@ -5,19 +5,15 @@ import Footer from "../components/Footer";
 import "../comp_css/Slider.css";
 import HomeProduct from "./HomeProduct";
 import ImageSlider from "../components/ImageSlider";
+import AboutUs from "../components/AboutUs";
 import { Navigate, useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navigate=useNavigate();
-  const slideImages = [
-    "https://www.jiomart.com/images/cms/aw_rbslider/slides/1691935239_Freedom_Finds.jpg?im=Resize=(1680,320)",
-    "https://www.jiomart.com/images/cms/aw_rbslider/slides/1691950461_Handloom_Sarees_in_Colors_of_India.jpg?im=Resize=(1680,320)",
-    "https://www.jiomart.com/images/cms/aw_rbslider/slides/1691612739_Aaj_Ki_Deals_Desktop.jpg?im=Resize=(1680,320)",
-  ];
 
   const styleFixedImg = {
     width: "100%",
-    height: "25vh",
+    height: "75vh",
     marginTop: "10px",
     marginBottom: "10px",
   };
@@ -43,7 +39,7 @@ const Home = () => {
       <div className="ImageFixed">
         <img
           style={styleFixedImg}
-          src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1691749079_Aaj_Ki_Deals.jpg?im=Resize=(1240,150)"
+          src="/images/medicine5.jpg?im=Resize=(840,550)"
           alt="Image"
         />
         <div>
@@ -51,6 +47,7 @@ const Home = () => {
         </div>
       </div>
       <ImageSlider />
+      <AboutUs/>
       <div>
         <Footer />
       </div>

@@ -16,4 +16,5 @@ private String status;
 	
 	private double totalAmount;
 	  private List<OrderItemDto> orderItem;
+	    private UserDto user;
 }

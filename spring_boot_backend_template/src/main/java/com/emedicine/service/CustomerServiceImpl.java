@@ -85,16 +85,16 @@ private PasswordEncoder passwordEncoder;
     return userRepository.save(newAdmin);
     }
 
-    public User changePassword(Integer userId, UserDto customer) throws UserException {
-    User user = userRepository.findById(userId).orElseThrow(() -> new UserException("User not found"));
-    if (customer.getNewPassword().length() >= 5 && customer.getNewPassword().length() <= 10) {
-    user.updatePassword(customer.getNewPassword(), passwordEncoder);
-    return userRepository.save(user);
-    } else {
-    throw new UserException("provide valid  password");
-    }
-
-    }
+//    public User changePassword(Integer userId, UserDto customer) throws UserException {
+//    User user = userRepository.findById(userId).orElseThrow(() -> new UserException("User not found"));
+//    if (customer.getNewPassword().length() >= 5 && customer.getNewPassword().length() <= 10) {
+//    user.updatePassword(customer.getNewPassword(), passwordEncoder);
+//    return userRepository.save(user);
+//    } else {
+//    throw new UserException("provide valid  password");
+//    }
+//
+//    }
 
 
     @Override

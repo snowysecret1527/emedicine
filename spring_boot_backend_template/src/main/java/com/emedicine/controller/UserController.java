@@ -40,12 +40,12 @@ public class UserController {
 //        return ResponseEntity.ok(addedUser);
 //    }
 
-    @PutMapping("/update-password/{customerId}")
-    public ResponseEntity<User> updateUserPassword(@PathVariable("customerId") Integer customerId,
-                                                  @Valid @RequestBody UserDto userdto) {
-        User updatedUser = userService.changePassword(customerId, userdto);
-        return ResponseEntity.ok(updatedUser);
-    }
+//    @PutMapping("/update-password/{customerId}")
+//    public ResponseEntity<User> updateUserPassword(@PathVariable("customerId") Integer customerId,
+//                                                  @Valid @RequestBody UserDto userdto) {
+//        User updatedUser = userService.changePassword(customerId, userdto);
+//        return ResponseEntity.ok(updatedUser);
+//    }
 
     @DeleteMapping("/deactivate/{customerid}")
     public ResponseEntity<String> deactivateUser(@PathVariable("customerid") Integer customerId) {

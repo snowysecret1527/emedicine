@@ -36,12 +36,12 @@ public class AdminController {
         User addedUser = userService.addUserAdmin(user);
         return ResponseEntity.ok(addedUser);
     }
-
-    @PutMapping("/updatepassword/{adminId}")
-    public ResponseEntity<User> updateUserPassword(@PathVariable("adminId") Integer customerId, @RequestBody UserDto userdto) {
-        User updatedUser = userService.changePassword(customerId, userdto);
-        return ResponseEntity.ok(updatedUser);
-    }
+//
+//    @PutMapping("/updatepassword/{adminId}")
+//    public ResponseEntity<User> updateUserPassword(@PathVariable("adminId") Integer customerId, @RequestBody UserDto userdto) {
+//       // User updatedUser = userService.changePassword(customerId, userdto);
+//        return ResponseEntity.ok(updatedUser);
+//    }
 
 
 }
